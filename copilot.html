@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        body {
+            border: 3px solid rgb(74, 235, 11);
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            border: 2px solid rgb(121, 157, 230);
+            margin: 14px;
+            padding: 1rem;
+        }
+        .mae {
+            border: 2px solid rgb(234, 23, 23);
+            margin: 14px;
+            gap: 4rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .mae-filha{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .filha {
+            flex: 1;
+            margin: 14px;
+            border: 2px solid rgb(240, 197, 8);
+            padding: 2rem 4rem;
+        }
+        section {
+            border: 2px solid rgb(121, 157, 230);
+            margin: 14px;
+            padding: 1rem;
+        }
+        section .filha1{
+            flex: 2;
+            margin: 14px;
+            border: 2px solid rgb(240, 197, 8);
+            padding: 2rem 4rem;
+        }
+        section .filha2{
+            flex: 1;
+            margin: 14px;
+            border: 2px solid rgb(240, 197, 8);
+            padding: 2rem 4rem;
+        }
+        footer {
+            border: 2px solid rgb(121, 157, 230);
+            margin: 14px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- inicio -->
+    <h1>This is the body</h1>
+    <main id="main">
+        <h2>This is main</h2>
+        <div class="mae">
+            <h3>This is div mãe</h3>
+            <p>as divs filhas estão com display flex ativado</p>
+            <div class="mae-filha">
+                <div class="filha"><p>Div filha 1</p></div>
+                <div class="filha"><p>Div filha 2</p></div>
+                <div class="filha">
+                    <p>Div filha 3</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur unde corporis consectetur eum quae fugiat amet culpa excepturi, optio quos aliquid, officiis voluptatibus, molestiae delectus non fuga labore exercitationem! Totam.</p>
+                </div>
+
+            </div>
+ 
+        </div>
+    </main>
+    <!-- meio -->
+    <section id="section">
+        <h2>Section</h2>
+        <p>Content inside section</p>
+        <div class="mae">
+            <h3>This is div mãe</h3>
+            <p>as divs filhas estão com display flex ativado, sendo filha1 flex 2 e filha2 flex 1</p>
+            <div class="mae-filha">
+                <div class="filha1"><p>Div filha 1</p></div>
+                <div class="filha2">
+                    <p>Div filha 2</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur unde corporis consectetur eum quae fugiat amet culpa excepturi, optio quos aliquid, officiis voluptatibus, molestiae delectus non fuga labore exercitationem! Totam.</p>
+                </div>
+
+            </div>
+ 
+        </div>
+    </section>
+    <!-- fim -->
+    <footer id="footer">
+        <h2>Footer</h2>
+        <p>Content inside footer</p>
+    </footer>
+</body>
+</html>
