@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizzaria Fictícia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          /* config titulo do site */
+        header {
+            background-color: #421e11;
+            color: white;
+            padding: 20px;
+            font-size: 15px;
+            text-align: left;
+            position: relative; /* Para posicionar o ícone sanduíche */
+        }
+
+        nav {
+            display: none;
+            text-align: right; /* Alinhamento à direita para mobile */
+        }
+         /* config menu mobile */
+        .menu-icon {
+            display: block;
+            background-color: #421e11;
+            color: white;
+            padding: 30px;
+            font-size: 36px;
+            cursor: pointer;
+            position: absolute; /* Para posicionar o ícone sanduíche */
+            right: 10px; /* Alinhamento à direita */
+            top: 5px; /* Ajuste da posição vertical */
+        }
+
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+             /* config lista menu desktop */
+            nav {
+                display: block;
+                text-align: center;
+                font-size: 23px;
+                gap: 100rem;
+                background-color: #421e11;
+                padding: 10px;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+            }
+
+            nav ul li {
+                display: inline;
+                margin: 0 10px;
+                
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                background-color: #421e11; /* Fundo laranja para mobile */
+            }
+               /* config lista do menu mobile*/
+            nav ul {
+                list-style: none; /* Remove os pontinhos */
+                margin: 0;
+                padding-top: 1px;
+                padding-right: 50px;
+                padding-bottom: 30px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li a {
+                color: white; /* Letras brancas */
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+            }
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #421e11;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pizzaria Fictícia</h1>
+        <!-- Ícone de sanduíche -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cardápio</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Bem-vindo à Pizzaria Fictícia</h2>
+        <a href="index.html">ir para pagina principal</a>
+
+        <p>Desfrute das nossas deliciosas pizzas feitas com ingredientes frescos e de qualidade!</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Pizzaria Fictícia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para alternar a visibilidade do menu
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        }
+
+        // JavaScript para ajustar o tamanho do ícone do menu
+        function setMenuIconSize(size) {
+            var menuIcon = document.querySelector('.menu-icon');
+            menuIcon.style.fontSize = size + 'px';
+        }
+    </script>
+</body>
+</html>
